@@ -1,0 +1,7 @@
+# FastAPI dependencies
+fastapi==0.61.1
+uvicorn==0.12.1
+pydantic==1.6.1
+
+# .env support
+python-dotenv==0.14.0
