@@ -21,6 +21,11 @@ The `envs` folder contains the files so you can use different settings depending
 - `WORKERS_PER_CORE`=`1`
 
 ## Usage
+### Download
+```
+$ cookiecutter https://github.com/alephmelo/fast-api-docker-template.git
+```
+
 ### Build
 This will build both `dev` and `prod` images.
 ```bash
