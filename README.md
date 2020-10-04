@@ -1,6 +1,6 @@
 # FastAPI Docker
 
-FastAPI Docker is a template to facilitate development as well productionization of your APIs. 
+FastAPI Docker is a template to facilitate development as well as productionization of your APIs. 
 
 ## Contents
 - Docker
@@ -12,7 +12,7 @@ FastAPI Docker is a template to facilitate development as well productionization
 
 ## Customize
 ### Settings Files
-The `envs` folder contains the files so you can use different settings depending on the environment you're running the API. It rellies on the enviroment variable `MODE`, which evals to `production` or `development` in order to read the correct `.env` file.
+The `envs` folder contains the files so you can use different settings depending on the environment you're running the API. It relies on the environment variable `MODE`, which evals to `production` or `development` in order to read the correct `.env` file.
 
 ### Environment Variables
 - `PORT`=`80`
@@ -44,12 +44,12 @@ dev_1   | INFO:     Application startup complete.
 ```
 
 ## Deployment
-Just push your built image to whatever cloud provider or manually start the service. It's tagged locally as `<app_namme>/<app_name>:latest-prod`.
+Just push your built image to whatever cloud provider or manually start the service. It's tagged locally as `<app_name>/<app_name>:latest-prod`.
 
 Example:
 ```
 $ make up-prod
-docker run -p 80:80 <app_namme>/<app_name>:latest-prod
+docker run -p 80:80 <app_name>/<app_name>:latest-prod
 INFO:     Started server process [1]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
