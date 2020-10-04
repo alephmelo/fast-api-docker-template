@@ -24,3 +24,19 @@ services:
       target: production
       context: .
       dockerfile: Dockerfile
+  
+  test:
+    image: {{cookiecutter.app_name}}/{{cookiecutter.app_name}}:latest-test
+    working_dir: /home/{{cookiecutter.app_name}}
+    entrypoint: pytest
+    build: 
+      target: testing
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - 8000:8000
+    volumes:
+      - .:/home/{{cookiecutter.app_name}}
+    
+    environment: 
+      - MODE=testing
