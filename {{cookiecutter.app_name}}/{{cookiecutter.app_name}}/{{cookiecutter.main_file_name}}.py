@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from workingtitle.utils.settings import Settings
+from {{cookiecutter.app_name}}.utils.settings import Settings
 
 
 app = FastAPI()

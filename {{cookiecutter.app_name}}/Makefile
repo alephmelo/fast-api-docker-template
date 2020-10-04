@@ -13,7 +13,7 @@ up-dev:
 	docker-compose up dev
 
 up-prod:
-	docker run -p 80:80 workingtitle/workingtitle:latest-prod
+	docker run -p 80:80 {{cookiecutter.app_name}}/{{cookiecutter.app_name}}:latest-prod
 
 bash:
 	docker-compose run --entrypoint=bash dev
