@@ -1,0 +1,26 @@
+version: "3.8"
+
+services: 
+  dev:
+    image: {{cookiecutter.app_name}}/{{cookiecutter.app_name}}:latest-dev
+    working_dir: /home/{{cookiecutter.app_name}}
+    entrypoint: uvicorn {{cookiecutter.app_name}}.{{cookiecutter.main_file_name}}:app --reload --host 0.0.0.0
+    build: 
+      target: development
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - 8000:8000
+    volumes:
+      - .:/home/{{cookiecutter.app_name}}
+    
+    environment: 
+      - MODE=development
+  
+  prod:
+    image: {{cookiecutter.app_name}}/{{cookiecutter.app_name}}:latest-prod
+    working_dir: /production/{{cookiecutter.app_name}}
+    build: 
+      target: production
+      context: .
+      dockerfile: Dockerfile

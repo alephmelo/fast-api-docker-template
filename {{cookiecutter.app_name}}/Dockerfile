@@ -1,6 +1,6 @@
-FROM python:3.8 as base
+FROM python:{{cookiecutter.python_version}} as base
 
-WORKDIR /home/workingtitle
+WORKDIR /home/{{cookiecutter.app_name}}
 
 COPY requirements.txt requirements.txt
 
@@ -20,7 +20,7 @@ COPY . .
 
 ARG PORT=80
 ARG HOST=0.0.0.0
-ARG APP_MODULE=workingtitle.workingtitle:app
+ARG APP_MODULE={{cookiecutter.app_name}}.{{cookiecutter.main_file_name}}:app
 ARG WORKERS_PER_CORE=1
 
 ENV MODE=production
