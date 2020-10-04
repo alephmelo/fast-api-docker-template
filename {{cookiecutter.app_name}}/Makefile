@@ -1,4 +1,4 @@
-phony: build dev test tests up-dev bash prod up-dev up-prod
+.PHONY: build dev test tests up-dev bash prod up-dev up-prod
 
 
 build: dev prod test
