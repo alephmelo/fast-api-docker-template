@@ -1,13 +1,19 @@
-phony: build dev up-dev bash prod up-dev up-prod
+phony: build dev test tests up-dev bash prod up-dev up-prod
 
 
-build: dev prod
+build: dev prod test
 
 dev:
 	docker-compose build dev
 
 prod:
 	docker-compose build prod
+
+test:
+	docker-compose build test
+
+tests:
+	docker-compose run test
 
 up-dev:
 	docker-compose up dev

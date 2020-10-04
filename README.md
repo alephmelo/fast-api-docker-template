@@ -12,7 +12,7 @@ FastAPI Docker is a template to facilitate development as well as productionizat
 
 ## Customize
 ### Settings Files
-The `envs` folder contains the files so you can use different settings depending on the environment you're running the API. It relies on the environment variable `MODE`, which evals to `production` or `development` in order to read the correct `.env` file.
+The `envs` folder contains the files so you can use different settings depending on the environment you're running the API. It relies on the environment variable `MODE`, which evals to `production`, `development` or `testing` in order to read the correct `.env` file.
 
 ### Environment Variables
 - `PORT`=`80`
@@ -27,7 +27,7 @@ $ cookiecutter https://github.com/alephmelo/fast-api-docker-template.git
 ```
 
 ### Build
-This will build both `dev` and `prod` images.
+This will build `dev`, `prod` and `test` images.
 ```bash
 $ make build
 ```
@@ -41,6 +41,11 @@ dev_1   | INFO:     Started reloader process [1] using statreload
 dev_1   | INFO:     Started server process [7]
 dev_1   | INFO:     Waiting for application startup.
 dev_1   | INFO:     Application startup complete.
+```
+
+### Test
+```bash
+$ make tests
 ```
 
 ## Deployment
@@ -57,4 +62,5 @@ INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
 ```
 
 ## Release History
+- 0.2.0 - Add testing infrastructure.
 - 0.1.0 - Initial version.
