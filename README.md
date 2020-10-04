@@ -62,5 +62,6 @@ INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
 ```
 
 ## Release History
+- 0.2.1 - Fix tests folder location.
 - 0.2.0 - Add testing infrastructure.
 - 0.1.0 - Initial version.
